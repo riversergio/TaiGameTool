@@ -3,3 +3,7 @@ nav#navbar
         a.tool-item(data-type='bold',title='In đậm')
         a.tool-item(data-type='italic',title='In nghiêng')
         a.tool-item(data-type='underline',title='Gạch dưới')
+    .user-box
+        if typeof(loginStatus) !== 'undefined'
+            if !loginStatus
+                a#login(href="/login") Đăng nhập

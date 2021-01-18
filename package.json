@@ -6,8 +6,14 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon --inspect app.js",
-    "sass": "node-sass -w --output-style compress src/sass -o public/css",
-    "prefix": "postcss public/css/*.css --use autoprefixer -b 'last 5 versions' -d public/css --watch"
+    "sass": "node-sass -w --output-style expanded src/sass -o public/css",
+    "prefix": "lint-staged"
+  },
+  "lint-staged":{
+    "./public/css/*.css": "postcss public/css/*.css --use autoprefixer -d public/css"
+  },
+  "husky":{
+    "pre-commit": "npm run prefix"
   },
   "repository": {
     "type": "git",
@@ -32,8 +38,11 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^8.3.1",
+    "typescript": "^4.1.3"
   }
 }

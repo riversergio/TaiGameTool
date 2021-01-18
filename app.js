@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 const routes = require('./src/routes');
+
+app.use(express.static('public'))
 app.use(express.urlencoded({
     extended: true
 }));

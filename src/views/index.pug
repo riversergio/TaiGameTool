@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 html(lang="en")
     include includes/head
-    body
-        include includes/navbar
+    body.home
+        #welcome
+            .center
+                h1 Chào mừng đến với TaiGameTool
+                p Đăng nhập để sử dụng tool
+                form(action="/login",method="post")
+                    input(type="text",name="username",placeholder="Tên đăng nhập")
+                    input(type="password", name="password",placeholder="Mật khẩu")
+                    button(type="submit") Đăng nhập
+                if typeof(msg) !== 'undefined' && msg
+                    #msg #{msg}
