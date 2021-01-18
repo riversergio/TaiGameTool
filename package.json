@@ -7,10 +7,11 @@
     "start": "node app.js",
     "dev": "nodemon --inspect app.js",
     "sass": "node-sass -w --output-style expanded src/sass -o public/css",
-    "prefix": "lint-staged"
+    "prefix": "lint-staged",
+    "prefixtest": "postcss ./public/css/*.css --use autoprefixer -d public/css"
   },
   "lint-staged":{
-    "./public/css/*.css": "postcss public/css/*.css --use autoprefixer -d public/css"
+    "./public/css/*.css": "postcss --use autoprefixer -d public/css"
   },
   "husky":{
     "pre-commit": "npm run prefix"
