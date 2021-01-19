@@ -4,11 +4,9 @@ html(lang="en")
     body.home
         #welcome
             .center
-                h1 Chào mừng đến với TaiGameTool
+                h1 Chào mừng <span>đến với</span> <b>TaiGameTool</b>
                 p Đăng nhập để sử dụng tool
-                form(action="/login",method="post")
-                    input(type="text",name="username",placeholder="Tên đăng nhập")
-                    input(type="password", name="password",placeholder="Mật khẩu")
-                    button(type="submit") Đăng nhập
-                if typeof(msg) !== 'undefined' && msg
-                    #msg #{msg}
+                .auth-button-group
+                    a(href="/login") <i class="icofont-login"></i> Đăng nhập
+                    span hoặc
+                    a(href="/register") Đăng ký

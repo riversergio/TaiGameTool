@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+    include includes/head
+    body.login
+        #welcome
+            .center
+                #controller
+                    a#back(href="/") <i class="icofont-bubble-left"></i>Quay lại
+                    h2 #{title ? title : "Untitle"}
+                form#loginForm(action="/login",method="post")
+                    input#username.form-input(type="text",placeholder="Tên đăng nhập",required,name="username")
+                    input#password.form-input(type="password",placeholder="Mật khẩu",required,name="password")
+                    button(type="submit") #{title ? title : "Đăng nhập"}
+                if typeof(msg) !== 'undefined'
+                    if 'type' in msg
+                        #msg(class=`alert alert-${msg.type}`) #{msg.value}
+                    else
+                        #msg(class="alert") #{msg.value}

@@ -10,10 +10,10 @@
     "prefix": "lint-staged",
     "prefixtest": "postcss ./public/css/*.css --use autoprefixer -d public/css"
   },
-  "lint-staged":{
+  "lint-staged": {
     "./public/css/*.css": "postcss --use autoprefixer -d public/css"
   },
-  "husky":{
+  "husky": {
     "pre-commit": "npm run prefix"
   },
   "repository": {
@@ -32,9 +32,15 @@
   },
   "homepage": "https://github.com/riversergio/TaiGameTool#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
     "googleapis": "^67.0.0",
     "lowdb": "^1.0.0",
+    "mongoose": "^5.11.12",
+    "morgan": "^1.10.0",
     "pug": "^3.0.0"
   },
   "devDependencies": {

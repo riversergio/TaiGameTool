@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="en")
+    include includes/head
+    body.login
+        #welcome
+            .center
+                #controller
+                    a#back(href="/") <i class="icofont-bubble-left"></i>Quay lại
+                    h2 #{title ? title : "Untitle"}
+                form#loginForm(action="/register",method="post")
+                    .input-group
+                        .input-item
+                            label(for="firstName") Họ
+                            if (typeof(formData) === 'undefined')
+                                input#firstName.form-input(type="text",placeholder="Họ",required,name="firstName")
+                            else
+                                input#firstName.form-input(type="text",placeholder="Họ",required,name="firstName",value=`${formData.firstName}`)
+                        .input-item
+                            label(for="lastName") Tên
+                            if (typeof(formData) === 'undefined')
+                                input#lastName.form-input(type="text",placeholder="Tên",required,name="lastName")
+                            else
+                                input#lastName.form-input(type="text",placeholder="Tên",required,name="lastName",value=`${formData.lastName}`)
+                    label(for="username") Tên đăng nhập
+                    if (typeof(formData) === 'undefined')
+                        input#username(type="text",placeholder="Tên đăng nhập",required,name="username")
+                    else
+                        if "username" in formData
+                            input#username(type="text",placeholder="Tên đăng nhập",required,name="username",value=`${formData.username}`)
+                        else
+                            input#username(type="text",placeholder="Tên đăng nhập",required,name="username")
+                    label(for="password") Mật khẩu
+                    input#password(type="password",placeholder="Mật khẩu",required,name="password")
+                    label(for="rePassword") Xác nhận mật khẩu
+                    input#rePassword(type="password",placeholder="Xác nhận mật khẩu",required,name="rePassword")
+                    button(type="submit") #{title ? title : "Đăng ký"}
+                    if (typeof(msg) !== 'undefined')
+                        #msg-box(class=`alert alert-${msg.type}`) #{msg.value}
