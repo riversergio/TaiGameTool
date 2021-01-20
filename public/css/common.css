@@ -19,10 +19,10 @@ body.home {
 
 #welcome {
   position: relative;
-  height: 100vh;
+  height: 100%;
   background: #eeeeee;
-  overflow: hidden;
   display: flex;
+  padding: 1rem 0;
   align-items: center;
   justify-content: center;
 }
@@ -36,6 +36,8 @@ body.home {
   margin: 0 1rem;
   font-size: 1.25rem;
   box-shadow: 0 5px 10px -1px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  max-height: 100%;
 }
 
 #welcome .center h1 {
@@ -94,7 +96,7 @@ body.home {
 
 #welcome .center #controller {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 #welcome .center #controller h2 {
@@ -158,4 +160,29 @@ body.home {
   border-radius: .25rem;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   margin-top: 1rem;
+}
+
+#welcome .center #msg-box {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: .5rem;
+  color: #ffffff;
+}
+
+#welcome .center #msg-box.alert-danger {
+  background-color: #c30;
+}
+
+#welcome .center #msg-box.alert-warning {
+  background-color: #fc0;
+  color: #333333;
+}
+
+#welcome .center #msg-box.alert-info {
+  background-color: #2fa1ec;
+}
+
+#welcome .center #msg-box.alert-success {
+  background-color: #9c3;
 }
