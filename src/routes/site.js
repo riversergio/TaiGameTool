@@ -9,7 +9,7 @@ const redirect = function(req, res, next){
         next();
     }
 }
-router.get('/dashboard', auth, controller.dashboard);
+
 router.post('/login',controller.login_post);
 router.post('/register', controller.register_post);
 router.get('/login', redirect,controller.login_get);

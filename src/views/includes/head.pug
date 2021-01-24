@@ -7,11 +7,12 @@ head
     // Embed
     if typeof(css) !== 'undefined' && css.length > 0
         each fileName in css
-            link(rel="stylesheet", href="/css/#{fileName}.css")
+            link(rel="stylesheet", href=`/css/${fileName}.css`)
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
     link(rel="stylesheet", href="/css/icofont.min.css")
     link(rel="stylesheet", href="/css/common.css")
+    script(src='/js/jquery.min.js')
+    script(src='/js/bootstrap.min.js')
     if typeof(script) !== 'undefined' && script.length > 0
         each fileName in script
-            script(src="/js/#{fileName}.js")
-    // CDN
-    script(src="https://apis.google.com/js/platform.js?onload=init",async,defer)
+            script(src=`/js/${fileName}.js`)

@@ -7,12 +7,6 @@ body, html {
   height: 100%;
 }
 
-body {
-  font-family: sans-serif;
-  font-size: 14px;
-  color: #333333;
-}
-
 body.home {
   overflow: hidden;
 }
@@ -160,29 +154,4 @@ body.home {
   border-radius: .25rem;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   margin-top: 1rem;
-}
-
-#welcome .center #msg-box {
-  margin-top: 2rem;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: .5rem;
-  color: #ffffff;
-}
-
-#welcome .center #msg-box.alert-danger {
-  background-color: #c30;
-}
-
-#welcome .center #msg-box.alert-warning {
-  background-color: #fc0;
-  color: #333333;
-}
-
-#welcome .center #msg-box.alert-info {
-  background-color: #2fa1ec;
-}
-
-#welcome .center #msg-box.alert-success {
-  background-color: #9c3;
 }

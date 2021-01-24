@@ -2,6 +2,35 @@
 html(lang="en")
     include includes/head
     body.dashboard
-        nav#navbar.toolbar
-            h1 Hello World
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            .container-fluid
+                a.navbar-brand(href="/dashboard") TaiGameTool
+                button.navbar-toggler(data-target='#my-nav', data-toggle='collapse', aria-controls='my-nav', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                .collapse.navbar-collapse#my-nav
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            a.nav-link(href='#') Thông tin
+                        li.nav-item
+                            a.nav-link(href='#') <i class="icofont-newspaper"></i> Tin Tức
+                        li.nav-item
+                            a.nav-link(href='#') <i class="icofont-sign-out"></i> Đăng xuất
+        #content
+            .container-fluid
+                .row.mt-3.mb-3
+                    aside.sidebar#sidenav-left.col-md-2.pr-0
+                        .sidenav-inner
+                            include includes/sidebarLeft
+                    #side-content.col-md-8
+                        .jumbotron.container-fluid
+                            h1.display-4 Title
+                            p.lead Subtitle
+                            hr.my-4
+                            p Content
+                    aside.sidebar#sidenav-right.col-md-2.pl-0
+                        .sidenav-inner
+                    
+
+
+                    
         
